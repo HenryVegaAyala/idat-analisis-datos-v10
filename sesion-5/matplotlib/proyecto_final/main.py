@@ -30,6 +30,16 @@ plt.xlabel("Mes")
 plt.ylabel("Monto (S/)")
 plt.legend()
 
+plt.subplot(2, 2, 2)
+plt.bar(ciudades["ciudad"], ciudades["ventas"], color="blue")
+plt.title("Ventas por Ciudad 2026")
+
+plt.subplot(2, 2, 3)
+plt.hist(clientes["edad"], bins=8, color="orange", edgecolor="black")
+plt.title("Distribución de Edad de Clientes 2026")
+plt.xlabel("Edad")
+plt.ylabel("Frecuencia")
+
 plt.tight_layout()
 plt.savefig("salidas/tablero.png", dpi=300)
 plt.close()
